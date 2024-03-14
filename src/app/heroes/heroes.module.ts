@@ -14,4 +14,4 @@ import { ListComponent } from './components/list/list.component';
   ],
   exports: [HeroComponent,ListComponent],
 })
-export class HeroesModule { }
+export class HeroesModule {5543 }
