@@ -22,6 +22,7 @@ export class MainPageComponent  {
   onNewCharacter(character: Character):void{
     console.log('Main page')
     console.log(character)
+    this.characters.push(character)
   }
 
 }
