@@ -22,7 +22,7 @@ export class AddCharacterComponent {
 
     //debugger;
 
-    if(this.character.name!= '' && this.character.power< 0){
+    if(this.character.name.length < 1 || this.character.power< 0){
       return;
     }
 
