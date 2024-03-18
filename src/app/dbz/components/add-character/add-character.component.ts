@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+
+
 import { Character } from '../../interfaces/character.interface';
 
 @Component({
@@ -8,12 +10,26 @@ import { Character } from '../../interfaces/character.interface';
 })
 export class AddCharacterComponent {
 
+  @Output()
+  onNewCharacter : EventEmitter<Character> = new EventEmitter();
+
   character : Character = {
     name: '',
     power: 0
   }
 
   emitCharacter():void{
+    if(this.character.name!= '' && this.character.power< 0){
+      return;
+    }
+
+    this.onNewCharacter.emit(this.character);
+    // Reset the form after emitting
     console.log(this.character);
+
+    this.character = {
+      name: '',
+      power: 0
+    }
   }
 }
