@@ -9,7 +9,7 @@
           let isOdd = odd"
           class="list-group-item d-flex justify-content-between align-items-center"
           [ngClass]="{'list-group-item-primary':isEven,'list-group-item-dark':isLast}">
-<form (ngSubmit)="onDeleteCharacter(i)">
+
 <div>
 
       <span class="text-primary">{{i+1}}. </span>
@@ -27,7 +27,7 @@
       <span class="list-group-item list-group-item-dark">Es par: {{isEven}}</span>
       <span class="list-group-item list-group-item-warning">Es impar: {{isOdd}}</span>-->
     </div>
-      <button class="btn btn-danger" >X</button>
-      </form>
+      <button class="btn btn-danger" (click)="onDeleteCharacter(i)">X</button>
+
       </li>
     </ul>

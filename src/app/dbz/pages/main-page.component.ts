@@ -28,6 +28,6 @@ export class MainPageComponent  {
   onDeleteCharacter(index:number):void{
     console.log('Main page borrado')
     console.log(index)
-    this.characters.splice(index)
+    this.characters.splice(index,1)
   }
 }
