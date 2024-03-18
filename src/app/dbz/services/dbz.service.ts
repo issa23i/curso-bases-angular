@@ -22,7 +22,7 @@ export class DbzService {
     power: 3000
   }]
 
-  onNewCharacter(character: Character):void{
+  addCharacter(character: Character):void{
     const newCharacter: Character= {...character, id: uuid()};
     console.log('Main page')
     console.log(character)
