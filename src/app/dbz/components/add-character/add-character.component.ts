@@ -19,6 +19,9 @@ export class AddCharacterComponent {
   }
 
   emitCharacter():void{
+
+    //debugger;
+
     if(this.character.name!= '' && this.character.power< 0){
       return;
     }
