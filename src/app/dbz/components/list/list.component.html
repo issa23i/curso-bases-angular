@@ -6,7 +6,8 @@
           let isLast = last;
           let isEven = even;
           let isOdd = odd"
-          class="list-group-item">
+          class="list-group-item"
+          [ngClass]="{'list-group-item-primary':isEven,'list-group-item-dark':isLast}">
 
 
 
@@ -19,10 +20,10 @@
       <strong>power: </strong>
 
       <span>{{item.power}}</span>
-
+<!--
       <span class="list-group-item list-group-item-success">Es el primero: {{isFirst}}</span>
       <span class="list-group-item list-group-item-info">Es el último: {{isLast}}</span>
       <span class="list-group-item list-group-item-dark">Es par: {{isEven}}</span>
-      <span class="list-group-item list-group-item-warning">Es impar: {{isOdd}}</span>
+      <span class="list-group-item list-group-item-warning">Es impar: {{isOdd}}</span>-->
       </li>
     </ul>
